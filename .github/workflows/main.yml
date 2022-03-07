@@ -10,8 +10,8 @@ jobs:
     - name: Download scripts
       run: |
         cd ~
-        wget https://raw.githubusercontent.com/aobiomi/Why/main/loop.sh
-        wget https://raw.githubusercontent.com/aobiomi/Why/main/preload.sh
+        wget https://raw.githubusercontent.com/GordiNoki/It-s-kinda-funny/main/loop.sh
+        wget https://raw.githubusercontent.com/GordiNoki/It-s-kinda-funny/main/preload.sh
     - name: Do stuff
       run: bash ~/preload.sh
       env:
