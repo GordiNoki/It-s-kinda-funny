@@ -1,8 +1,10 @@
 sudo apt update
-sudo apt install jq screen curl -y
+sudo apt install jq screen curl openssh-server -y
 cd ~
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz -q
 tar -xf ngrok-stable-linux-amd64.tgz
+
+sudo systemctl start ssh
 
 ./ngrok authtoken $NGROK_AUTH_TOKEN
 screen -dm ./ngrok tcp 22
