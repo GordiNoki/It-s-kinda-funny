@@ -1,4 +1,4 @@
-name: RDP-VPS
+name: AHAHAHA
 
 on: workflow_dispatch
 
@@ -13,8 +13,8 @@ jobs:
         wget https://raw.githubusercontent.com/aobiomi/Why/main/loop.sh
         wget https://raw.githubusercontent.com/aobiomi/Why/main/preload.sh
     - name: Do stuff
-      run: bash preload.sh
+      run: bash ~/preload.sh
       env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: All Done! You can close Tab now! Maximum VM time:6h.
-      run: bash loop.sh
+      run: bash ~/loop.sh
