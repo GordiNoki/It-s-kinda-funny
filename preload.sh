@@ -11,8 +11,8 @@ screen -dm ./ngrok tcp 22
 
 sudo ufw disable
 
-passMyWord=`echo "passasas" | openssl passwd -crypt -stdin`
-sudo useradd -m -p $passMyWord -s /bin/bash bidgido
+sudo useradd -m -s /bin/bash bidgido
+echo -e "passasas\npassasas\n" | sudo passwd bidgido
 sudo usermod -aG sudo bidgido
 
 echo IP: $(curl -s localhost:4040/api/tunnels | jq -r .tunnels[0].public_url)
