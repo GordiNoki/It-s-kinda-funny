@@ -1,12 +1,12 @@
 sudo apt update
 sudo apt install jq screen curl openssh-server -y
 cd ~
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz -q
-tar -xf ngrok-stable-linux-amd64.tgz
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz -q -O ngrok.tgz
+tar -xf ngrok.tgz
 
 sudo systemctl start ssh
 
-./ngrok authtoken $NGROK_AUTH_TOKEN
+./ngrok config add-authtoken $NGROK_AUTH_TOKEN
 screen -dm ./ngrok tcp 22
 
 sudo ufw disable
